@@ -41,7 +41,7 @@
   /* ---------- 태그 우선 정렬 ---------- */
   // 기본 순서: 만든 순서 번호(no)가 큰 것부터 → 없으면 파일에 적힌 순서
   const works = (D.works || []).map((w, i) => ({ ...w, tags: w.tags || [], _src: i }))
-    .sort((a, b) => (b.no ?? -Infinity) - (a.no ?? -Infinity) || a._src - b._src)
+    .sort((a, b) => (b.pin ? 1 : 0) - (a.pin ? 1 : 0) || (b.no ?? -Infinity) - (a.no ?? -Infinity) || a._src - b._src)
     .map((w, i) => ({ ...w, _i: i }));
   let order = []; // 누른 순서 = 우선순위
 
@@ -105,7 +105,7 @@
         ? `<a class="open-hint" href="${esc(w.pdf)}" target="_blank" rel="noopener"><span>PDF 보기<span class="go"> →</span></span>${has(w.pages) ? `<span class="n">${esc(w.pages)}</span>` : ""}</a>`
         : "";
       return `
-        <article class="work${dim ? " dim" : ""}${has(w.pdf) ? " clickable" : ""}" data-pdf="${esc(w.pdf || "")}">
+        <article class="work${dim ? " dim" : ""}${w.status === "폐기" ? " archived" : ""}${has(w.pdf) ? " clickable" : ""}" data-pdf="${esc(w.pdf || "")}">
           ${thumb}
           <div class="body">
             <div class="meta">${w.no != null ? `<span class="no"><span class="k">제작 순서</span> ${esc(w.no)}</span>` : ""}${["game","period","type"].filter((k) => has(w[k])).map((k) => `<span>${esc(w[k])}</span>`).join("")}${has(w.status) ? `<span class="status">${esc(w.status)}</span>` : ""}</div>

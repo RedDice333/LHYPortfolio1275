@@ -123,6 +123,15 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 45px 80px; }
 .work .open-hint .go { color: var(--accent); }
 .work .open-hint .n { color: var(--sub); }
 
+/* 폐기 카드: 흐린 회색, PDF 보기는 유지 */
+.work.archived { border-left-color: var(--box); }
+.work.archived .thumb img { filter: grayscale(1); opacity: .45; }
+.work.archived h3, .work.archived .points, .work.archived .summary { color: var(--sub); }
+.work.archived .meta .no, .work.archived .meta .status { color: var(--chrome); }
+.work.archived .points li::before { color: var(--chrome); }
+.work.archived .open-hint .go { color: var(--chrome); }
+.work.archived:hover .thumb img { opacity: .7; }
+
 .foot { max-width: 1200px; margin: 0 auto; padding: 24px 45px 48px; color: var(--chrome); font-size: 12px; border-top: 1px solid var(--row); }
 
 @media (max-width: 720px) {
