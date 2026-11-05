@@ -110,6 +110,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 45px 80px; }
 .work .points li { padding-left: 14px; position: relative; }
 .work .points li::before { content: "·"; position: absolute; left: 2px; color: var(--accent); font-weight: 700; }
 .work .links { flex-wrap: wrap; row-gap: 6px; }
+.work .note { margin: 20px 0 0; font-size: 14px; color: #DDDDDD; }
 .work .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 8px; }
 .work .links { display: flex; gap: 16px; border-top: 1px solid var(--row); padding-top: 10px; font-size: 13px; }
 .work .links a { color: var(--text); text-decoration: none; }

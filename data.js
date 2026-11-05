@@ -48,6 +48,7 @@ window.PORTFOLIO = {
       title: "",
       status: "제작 중",
       summary: "11월 6일 오전 9시 업로드 예정",
+      note: "감사합니다.",
       tags: [],
       thumb: ""
     },

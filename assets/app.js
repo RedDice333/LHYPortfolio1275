@@ -111,6 +111,7 @@
             <div class="meta">${w.no != null ? `<span class="no"><span class="k">제작 순서</span> ${esc(w.no)}</span>` : ""}${["game","period","type"].filter((k) => has(w[k])).map((k) => `<span>${esc(w[k])}</span>`).join("")}${has(w.status) ? `<span class="status">${esc(w.status)}</span>` : ""}</div>
             <h3>${esc(w.title)}</h3>
             ${has(w.summary) ? `<p class="summary">${esc(w.summary)}</p>` : ""}
+            ${has(w.note) ? `<p class="note">${esc(w.note)}</p>` : ""}
             ${(w.points || []).length ? `<ul class="points">${w.points.map((q) => `<li>${esc(q)}</li>`).join("")}</ul>` : ""}
             <div class="tags">${w.tags.map((t) => `<button type="button" class="chip${order.includes(t) ? " hit" : ""}" data-tag="${esc(t)}">${esc(t)}</button>`).join("")}</div>
             ${links ? `<div class="links">${links}</div>` : ""}
