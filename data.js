@@ -44,13 +44,20 @@ window.PORTFOLIO = {
   */
   works: [
     {
-      pin: true,
-      title: "",
-      status: "제작 중",
-      summary: "11월 6일 오전 9시 업로드 예정",
-      note: "감사합니다.",
-      tags: [],
-      thumb: ""
+      no: 4,
+      title: "원거리 무기 연계 전투 시스템 제안서",
+      game: "Stellar Blade",
+      pdf: "assets/pdf/stellarblade-combat.pdf",
+      pages: "23p",
+      status: "",
+      points: [
+        "현재 구조 What — 전투의 구성 요소 · 원거리 무기",
+        "제안 이유 Why — 근접 전투 요소와 원거리 무기의 역할 · 조작 · 연계 제안 · 기대 효과",
+        "제안 방안 How — '연계: 산탄' · '연계: 작렬탄' · '공중: 스팅어 미사일'",
+        "세부 명세 — 언리얼 엔진 프로토타이핑 · 워크플로우 · 데이터테이블"
+      ],
+      tags: ["전투 기획", "언리얼", "데이터 테이블"],
+      thumb: "assets/thumbs/stellarblade-combat.jpg"
     },
     {
       no: 3,
