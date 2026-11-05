@@ -97,7 +97,7 @@
       const dim = order.length && !hit;
       const thumb = has(w.thumb)
         ? `<div class="thumb"><img src="${esc(w.thumb)}" alt="${esc(w.title)} 대표 페이지" loading="lazy"></div>`
-        : `<div class="thumb empty">썸네일</div>`;
+        : `<div class="thumb empty"></div>`;
       const links = (w.links || []).filter((l) => has(l.label)).map((l) =>
         has(l.href) ? `<a href="${esc(l.href)}" target="_blank" rel="noopener">${esc(l.label)}</a>` : `<span style="color:var(--chrome)">${esc(l.label)}</span>`
       ).join("");
